@@ -1,0 +1,34 @@
+.escrita{
+    display: inline-block;
+}
+
+h1{
+    font-family: monospace;
+    border-right: 2.5px solid green;
+    animation: cursor .5s infinite,
+        escrevendo 3.5s steps(27, end);
+    /* aqui damos o nome, o tempo e o período da animação, steps é a quantidade de passos da animação*/
+    white-space: nowrap;
+    /* isso faz não quebrar linha quando o container for menor, pra ela ficar reta */
+    overflow: hidden;
+    /* isso faz o elemento desaparecer se estiver para fora do container*/
+}
+
+/* animando o efeito de cursor */
+@keyframes cursor {
+    0% {
+    border-color: transparent;
+    }
+    50%{
+    border-color: green;
+    }
+}
+
+@keyframes escrevendo {
+    /*para animar, ao invés de usar % podemos usar assim*/
+    from {
+    width:0;
+    } to {
+    width: 100%
+    }
+}
